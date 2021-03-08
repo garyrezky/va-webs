@@ -13,21 +13,20 @@ const Header = () => {
     return (
         <div>
             <div className="profile1">
-                
                 <Row>
                     <Col md={2}>
-
+                    <Container>
                     <div className="leftSide1">
                     <h2>Landmark</h2>
                     <h3>Saparua</h3>
                     <img src={saparua} /><br/>
-                    <a href=""><p>More ▽</p></a>
+                    <a href=""><p>More▽</p></a>
                     </div><br />
-                    {/* </Container> */}
+                    </Container>
 
                     </Col>
                     <Col md={8}>
-                    {/* <Container> */}
+                    <Container>
 
                     <img src={header} className="banner"/>
                     <Row>
@@ -40,33 +39,32 @@ const Header = () => {
                             Liew Yan Mei</p></h3>
                         </div>
                         </Col>
-                        <Col sm={1}>
-                        <a href="" className="navIcon"><h2><MdNotifications /> </h2>
+                        <a href="" className="navIcon1"><h2><MdNotifications /> </h2>
                         <p>5</p>
+                        
                         </a>
-                        </Col>
-                        <Col sm={1}>
                         <a href="" className="edit"><h2><FiEdit />
                         </h2> 
+                        
                         <p>Edit Profile</p>
                         </a>
-                        </Col>
                     </Row>
                     <hr />
-                    {/* </Container> */}
+                    </Container>
 
                     </Col>
                     <Col md={2}>
+                    <Container>
 
                     <div className="rightSide1">
                     <img src={tellus} />
                     <h2>Your Fav Places to see in your town</h2>
                     </div><br />
+                    </Container>
                     
                     </Col>
 
                 </Row>
-            
             </div>
         </div>
 

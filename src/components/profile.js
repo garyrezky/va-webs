@@ -1,24 +1,26 @@
-import React from 'react' 
-import header from './assets/img/header.png'
+import React, {useState} from 'react' 
+import Modals from '../components/modalSignup'
 import { Col, Container, Row, Nav, Form, NavDropdown } from 'react-bootstrap'
 import { AiFillLike } from 'react-icons/ai';
 import { FaShareAlt } from 'react-icons/fa';
-import { FiEdit } from 'react-icons/fi';
 import { BiMenu } from 'react-icons/bi';
 import { IoMdChatboxes } from 'react-icons/io';
-import { MdNotifications } from 'react-icons/md';
 import car from './assets/img/car.png'
 import chandra from './assets/img/chandra.png'
 import andre from './assets/img/andre.png'
 import enteng from './assets/img/enteng.png'
 import richard from './assets/img/richard.png'
 import deviana from './assets/img/deviana.png'
+import Chats from './chat';
 
 const Profile = () => {
+    const [modalShow, setModalShow] = useState(false);
+
     return (
         <div>
             {/* <p>this is profile member</p> */}
             <Container>
+
             <div className="profile1">
           
             <div className="underForm">
@@ -46,6 +48,7 @@ const Profile = () => {
                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
             </Nav>
+            <img src={chandra} className="imgform"/>
             <Form.Control placeholder="Let us know your thoughts" as="textarea" rows={3}/>
             <Nav defaultActiveKey="/home" as="ul">
             <Nav.Item className="underForm" as="li">
@@ -88,16 +91,19 @@ const Profile = () => {
                 <Container>
                 <Row>
                     <Col>
-                    <img src={andre}/>
+                    <a onClick={() => setModalShow(true)}><img src={andre}/>
                     <p>Andre</p>
+                    </a>
                     </Col>
                     <Col>
-                    <img src={chandra}/>
+                    <a href=""><img src={chandra}/>
                     <p>Chandra</p>
+                    </a>
                     </Col>
                     <Col>
-                    <img src={enteng}/>
+                    <a href=""><img src={enteng}/>
                     <p>Enteng</p>
+                    </a>
                     </Col>
                     <Col>
                     {/* <img src={chandra}/> */}
@@ -105,12 +111,14 @@ const Profile = () => {
                 </Row>
                 <Row>
                     <Col >
-                    <img src={richard}/>
+                    <a href=""><img src={richard}/>
                     <p>Richard</p>
+                    </a>
                     </Col>
                     <Col>
-                    <img src={deviana}/>
+                    <a href=""><img src={deviana}/>
                     <p>Deviana</p>
+                    </a>
                     </Col>
                     <Col >
                     {/* <img src={chandra}/> */}
@@ -142,7 +150,7 @@ const Profile = () => {
                         <a href="" style={{color: '#930000'}}><h2><AiFillLike /> </h2></a>
                         </Col>
                         <Col >
-                        <a href="" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
+                        <a href="/MusicCulture" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
                         </Col>
                         <Col>
                         <a href="" style={{color: '#930000'}}><h2><FaShareAlt /> </h2></a>
@@ -167,7 +175,7 @@ const Profile = () => {
                         <a href="" style={{color: '#930000'}}><h2><AiFillLike /> </h2></a>
                         </Col>
                         <Col>
-                        <a href="" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
+                        <a href="/MusicCulture" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
                         </Col>
                         <Col>
                         <a href="" style={{color: '#930000'}}><h2><FaShareAlt /> </h2></a>
@@ -180,6 +188,8 @@ const Profile = () => {
             <br />
             </div>
             </div><br />
+            <Chats show={modalShow} onHide={() => setModalShow(false)} />
+
             </Container>
         </div>
     )

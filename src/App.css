@@ -53,6 +53,13 @@ hr {
 
 .sidebar img {
   width: 100%;
+  background-color: white;
+}
+.sidebar .logo {
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 20px;
+  border-color: white;
 }
 
 .sidebar h1 {
@@ -72,7 +79,10 @@ hr {
   background-color: white;
   padding-top: none;
 }
-
+.footer-login img {
+  float: left;
+  margin-left: 20px;
+}
   .button-login {
     display: inline-block;
     width: 100%;
@@ -227,9 +237,14 @@ hr {
     padding-left: 15px;
   }
 
+  .navHeader .logo {
+    float: left;
+  }
+
   .navHeader a {
     text-decoration: none;
     color: #930000;
+    display: inline-block;
   }
   .navHeader a:hover {
     text-decoration: none;
@@ -237,33 +252,97 @@ hr {
   }
 
   .containerNotif {
-    position: absolute;
+    /* position: absolute; */
+    display: inline;
     text-align: left;
   }
 
+  .containerNotif a {
+    display: inline-block;
+  }
+
   .containerNotif img {
-    width: 40%!important;
+    width: 35%!important;
     height: auto;
+    padding-top: 5px;
     /* margin: 30px; */
     padding-top: none;
+    margin-left: 25px;
     /* padding-right: 60px; */
-    align-items: left;
+    align-items: right;
+  }
+
+  .containerNotif1 img {
+    width:30%!important;
+    height: auto;
+    padding-top: 5px;
+    /* margin: 30px; */
+    padding-top: none;
+    margin-left: 25px;
+    /* padding-right: 60px; */
+    align-items: right;
   }
 
   .classifiedIcon {
     position: relative;
-    bottom: 33px;
+    bottom: 35px;
     left: 30%;
-    transform: translate(-50%, -50%);
     background-color: lightgray;
-    border-radius: 60%;
+    border-radius: 50%;
     text-align: center;
     margin: 14px;
-    width: 30%;
-    padding-right: 7px;
-    padding-left: 7px;
-    padding-bottom: 2px;
-    padding-top: 2px;
+    padding: 5px 10px 5px 10px;
+    width: auto;
+    display: inline;
+  }
+
+  .classifiedIcon1 {
+    position: relative;
+    background-color: lightgray;
+    border-radius: 50%;
+    right: 20%;
+    bottom: 8px;
+    text-align: center;
+    margin: 14px;
+    padding: 5px 10px 5px 10px;
+    width: auto;
+    display: inline;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .classifiedIcon1 {
+      /* bottom: 35px; */
+      margin-left: 0;
+      right: 0;
+      left: 30%;
+      bottom: 35px;
+    }
+    .containerNotif1 img {
+      width: 50%!important;
+      padding-top: 5px;
+      margin-left: 0px;
+      padding-top: none;
+      /* margin-left: 25px; */
+      /* padding-right: 60px; */
+      align-items: right;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .classifiedIcon {
+      bottom: 35px;
+      margin-left: 0;
+    }
+
+    .containerNotif img {
+      width: 70%!important;
+      padding-top: 5px;
+      margin-left: 0px;
+      padding-top: none;
+      /* margin-left: 25px; */
+      /* padding-right: 60px; */
+      align-items: right;
+    }
   }
 
   .navIcon p{
@@ -284,6 +363,23 @@ hr {
     padding-top: 2px;
   }
 
+  .navIcon1 p{
+    position: relative;
+    bottom: 60px;
+    left: 48%;
+    /* transform: translate(-50%, -50%); */
+    background-color: lightgray;
+    border-radius: 60%;
+    /* font-size: large; */
+    text-align: center;
+    display: inline-block;
+    margin: 14px;
+    width: 60%;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+  }
   /* Right Side Bar  */
 
   .rightSide1 {
@@ -553,14 +649,13 @@ hr {
   .clapper {
     position: relative;
     /* bottom: 10%; */
-    top: 60px;
+    top: 50px;
     right: 25%;
     /* right: 50%; */
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -0%);
     background-color: lightgray;
     /* font-size: large; */
     width: 23%;
-    height: 15%;
     text-align: left;
   }
 
@@ -578,8 +673,29 @@ hr {
 
   .profile1 a{
     color: black;
-    /* display: inline-block; */
+    display: inline-block;
+    text-decoration: none;
+    text-align: right;
+
   }
+
+  .profile1 .imgform {
+    border-radius: 50%;
+    width: 7%;
+    float: left;
+    top: 20px;
+    transform: translate(-30%, 30%);
+
+  }
+
+  .profile1 .notif {
+    padding-left: 30px;
+  }
+
+  .profile1 .notif p {
+    padding-left: 30px;
+  }
+
 
   .profile1 a:hover{
     color: #930000;
@@ -598,10 +714,28 @@ hr {
 
   .grup img {
     /* display: block; */
-    width: 70%;
+    width: 75%;
     border-radius: 50%;
     padding: 10px;
     /* float: left; */
+  }
+
+  .grup a{
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .grup a:hover {
+    text-decoration: none;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .grup img {
+      width: 150%;
+    }
   }
 
   /* .grup iframe {
@@ -675,6 +809,14 @@ hr {
     position: absolute;
   }
 
+  @media only screen and (max-width: 700px) {
+    .star {
+      position: absolute;
+      top: 140px;
+      left: 40px;
+    }
+  }
+
   .star h2 {
     /* left: 60%; */
     color: #930000;
@@ -704,14 +846,21 @@ hr {
     border: none;
     cursor: pointer;
     right: 0;
-    justify-content: end;
+
   }
   
   .dropdown1 {
     position: relative;
     display: inline;
-    left: 45%;
+    margin-left: 50%;
     float: right;
+    justify-content: end;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .dropdown1 {
+      left: 0;
+    }
   }
   
   .dropdown-content {
@@ -762,6 +911,10 @@ hr {
     background-color: lightgray;
   }
 
+  .reviews a {
+    display: inline-block;
+  }
+
   .reviews h2{
     color: #930000;
     text-align: left;
@@ -769,11 +922,8 @@ hr {
     display: inline;
   }
   .reviews h3 {
-    position: absolute;
-    /* right: 50%; */
-    transform: translate(-50%, -50%);
+    width: 100%;
     text-align: center;
-    margin-left: 30px;
     
   }
 
@@ -802,17 +952,15 @@ hr {
     width: 90%!important;
     border-radius: 0!important;
     padding: 0!important;
-    margin-left: 37px;
+    margin-right: 20px;
+    margin-top: 20px;
   }
 
   .edit p{
     display: inline-block;
-    position: absolute;
     /* right: 50%; */
-    transform: translate(80%, -120%);
-    text-align: center;
-    /* margin-left: 40px; */
-    right: 0;
+    transform: translate(100%, -130%);
+    text-align: right;
   }
 
   

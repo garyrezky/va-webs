@@ -11,7 +11,6 @@ const GeneralMember = () => {
     return (
         <div>
             <NavBars />
-            <br />
             General Member
             <Header2 />
 

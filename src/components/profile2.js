@@ -1,4 +1,4 @@
-import React from 'react' 
+import React, {useState} from 'react' 
 import { Col, Container, Row, Nav, Form, NavDropdown } from 'react-bootstrap'
 import { AiFillLike } from 'react-icons/ai';
 import { FaShareAlt } from 'react-icons/fa';
@@ -6,15 +6,22 @@ import { BiMenu } from 'react-icons/bi';
 import { IoMdChatboxes } from 'react-icons/io';
 import { RiStarFill } from 'react-icons/ri';
 import car from './assets/img/car.png'
+import andre from './assets/img/andre.png'
 import chandra from './assets/img/chandra.png'
+import enteng from './assets/img/enteng.png'
+import richard from './assets/img/richard.png'
+import deviana from './assets/img/deviana.png'
+import andy from './assets/img/andy.jpg'
 import iphone from './assets/img/iphone.png'
-import { SiApple } from 'react-icons/si';
-import { RiSpotifyLine } from 'react-icons/ri';
 import { FcIdea } from 'react-icons/fc';
+import Chats from './chat';
 
 const Profile2 = () => {
+    const [modalShow, setModalShow] = useState(false);
     return (
         <div>
+            <Chats/>
+
             {/* <p>this is profile cultural</p> */}
             <Container>
             <div className="profile1">
@@ -44,6 +51,7 @@ const Profile2 = () => {
                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
             </Nav>
+            <img src={andy} className="imgform"/>
             <Form.Control placeholder="Let us know your thoughts" as="textarea" rows={3}/>
             <Nav defaultActiveKey="/home" as="ul">
             <Nav.Item className="underForm" as="li">
@@ -66,7 +74,7 @@ const Profile2 = () => {
             </NavDropdown> */}
             <div class="dropdown1">
             {/* <button class="dropbtn">Dropdown</button> */}
-            <a href="" class="dropbtn"><h2><BiMenu /> </h2></a>
+            <a class="dropbtn"><h2><BiMenu /> </h2></a>
 
             <div class="dropdown-content">
             <a href="#">Mom</a>
@@ -86,22 +94,20 @@ const Profile2 = () => {
             <Container>
                 <Row>
                     <Col>
-                    <img src={chandra}/>
+                    <a onClick={() => setModalShow(true)}>                    
+                    <img src={andre}/>
                     <p>Andre</p>
                     <div className="star">
                         <h2><RiStarFill /> </h2>
                     </div>
-                    {/* <h2>
-                    <img src={chandra}/>
-                    <AiFillLike /></h2>
-                    <p>Andre</p> */}
+                    </a>
                     </Col>
                     <Col>
                     <img src={chandra}/>
                     <p>Chandra</p>
                     </Col>
                     <Col>
-                    <img src={chandra}/>
+                    <img src={enteng}/>
                     <p>Enteng</p>
                     </Col>
                     <Col>
@@ -110,11 +116,11 @@ const Profile2 = () => {
                 </Row>
                 <Row>
                     <Col>
-                    <img src={chandra}/>
+                    <img src={richard}/>
                     <p>Richard</p>
                     </Col>
                     <Col>
-                    <img src={chandra}/>
+                    <img src={deviana}/>
                     <p>Deviana</p>
                     </Col>
                     <Col>
@@ -133,9 +139,9 @@ const Profile2 = () => {
             <br/>
                 <Row>
                     <Col sm={1}>
-                    <img src={chandra} />
+                    <img src={andy} />
                     </Col>
-                    <Col>
+                    <Col sm={11}>
                     <p>This Morning i received a shocking news, the sudden passing of one of my very best friends
                         Dharma Sadini at 5.00 AM Saturday, in Los Angeles. Rest in Peace my brother... you are in
                         greatest hands now... The Lord will take care of your family. Miss you bro; miss singing 
@@ -143,13 +149,13 @@ const Profile2 = () => {
                     </p>
                 <hr/>
                     <Row>
-                        <Col sm={2}>
+                        <Col>
                         <a href="" style={{color: '#930000'}}><h2><AiFillLike /> </h2></a>
                         </Col>
-                        <Col sm={2}>
-                        <a href="" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
+                        <Col>
+                        <a href="/MusicCulture" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
                         </Col>
-                        <Col sm={2}>
+                        <Col>
                         <a href="" style={{color: '#930000'}}><h2><FaShareAlt /> </h2></a>
                         </Col>
                     </Row>
@@ -160,27 +166,24 @@ const Profile2 = () => {
                     <Col sm={1}>
                     <h3>MCC</h3>
                     </Col>
-                    <Col>
-                    <div className="grup">
+                    <Col sm={11}>
+                    {/* <div className="grup"> */}
                 
                <iframe width="90%" height="345" src="https://www.youtube.com/embed/RgKAFK5djSk?controls=0"><br/>
                </iframe>
 
-            </div> 
+            {/* </div>  */}
                 <Row>
-                        <Col sm={2}>
+                        <Col >
                         <a href="" style={{color: '#930000'}}><h2><AiFillLike /> </h2></a>
                         </Col>
-                        <Col sm={2}>
-                        <a href="" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
+                        <Col>
+                        <a href="/MusicCulture" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
                         </Col>
-                        <Col sm={2}>
-                        {/* <a href="" style={{color: '#930000'}}><h2><FaShareAlt /> </h2></a> */}
-                        </Col>
-                        <Col sm={2}>
+                        <Col>
                         <a href="" style={{color: '#930000'}}><h2><FcIdea /> </h2></a>
                         </Col>
-                        <Col sm={2}>
+                        <Col>
                         <a href="" style={{color: '#930000'}}><h2><FcIdea /> </h2></a>
                         </Col>
                         
@@ -194,7 +197,7 @@ const Profile2 = () => {
                 <Row>
                     
                     <Col sm={1}>
-                    <img src={chandra} />
+                    <img src={andy} />
                     </Col>
                     
                     <Col>
@@ -205,13 +208,13 @@ const Profile2 = () => {
                     </p>
                 <hr/>
                     <Row>
-                        <Col sm={2}>
+                        <Col>
                         <a href="" style={{color: '#930000'}}><h2><AiFillLike /> </h2></a>
                         </Col>
-                        <Col sm={2}>
-                        <a href="" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
+                        <Col>
+                        <a href="/MusicCulture" style={{color: '#930000'}}><h2><IoMdChatboxes /> </h2></a>
                         </Col>
-                        <Col sm={2}>
+                        <Col>
                         <a href="" style={{color: '#930000'}}><h2><FaShareAlt /> </h2></a>
                         </Col>
                     </Row>
@@ -221,6 +224,7 @@ const Profile2 = () => {
                 
             </div><br />
             </div>
+            <Chats show={modalShow} onHide={() => setModalShow(false)} />
             
             </Container>
         </div>

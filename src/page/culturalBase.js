@@ -4,24 +4,22 @@ import '../App.css'
 import Header from '../components/header'
 import LeftSideBar2 from '../components/leftSideBar2'
 import NavBars from '../components/navbar'
-import Profile from '../components/profile'
+import Profile2 from '../components/profile2'
 import RightSideBar from '../components/rightSideBar'
 
 const CulturalBase = () => {
     return (
         <div>
             <NavBars />
-            <br />
-            Cultural Base Member<Container>
+            Cultural Base Member
             <Header />
-            </Container>
             <Row>
                 <Col lg={3}>
                 <LeftSideBar2 />
                 </Col>
 
                 <Col lg={7}>
-                <Profile />
+                <Profile2 />
                 </Col>
 
                 <Col lg={2}>

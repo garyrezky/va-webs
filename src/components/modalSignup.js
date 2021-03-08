@@ -29,8 +29,8 @@ const ModalSignup = (props) => {
                     <Form.Control className="form-control was-validated" type="text" placeholder="First name" required/>
                   </Form.Group>
 
-                  <Form.Group as={Col} controlId="surname">
-                    <Form.Control type="text" placeholder="Surname" required/>
+                  <Form.Group as={Col} controlId="username">
+                    <Form.Control type="text" placeholder="Username" required/>
                   </Form.Group>
                 </Form.Row>
 

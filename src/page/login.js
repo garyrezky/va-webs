@@ -3,6 +3,7 @@ import { Row, Col, Form, Carousel, Container, Button } from 'react-bootstrap'
 import '../App.css'
 import Bali from '../components/assets/img/bali.png'
 import Carousels from '../components/assets/img/carousel.png'
+import logos from '../components/assets/img/name_logo.png'
 const Login = () => {
     return (
         <div>
@@ -61,7 +62,7 @@ const Login = () => {
             <div className="footer-login">
                 <Row>
                     <Col lg={4}>
-                    <h1>Voorale</h1>
+                    <a href="/"><img src={logos} className="logo" width="50%"/></a>
                     </Col>
                     <Col>
                     <form action="/GeneralMember">

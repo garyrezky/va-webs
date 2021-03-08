@@ -9,8 +9,7 @@ import RightSideBar from '../components/musicCulture/rightSideBar'
 const MusicCulture = () => {
     return (
         <div>
-            {/* <NavBars /> */}
-            <br />
+            <NavBars />
             <Row>
                 <Col>
                 <LeftSideBar />
