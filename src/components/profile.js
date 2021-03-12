@@ -15,12 +15,25 @@ import Chats from './chat';
 
 const Profile = () => {
     const [modalShow, setModalShow] = useState(false);
-
+    const [isShow, setIsShow] = useState(false);
+    const handleShow = (condition) => setIsShow(condition);
+    const handleClose = () => setModalShow(false)
+    const [parseName, setParseName] = useState('');
+    const person = [{'name': 'Andre', 'image': andre },{'name': 'Chandra', 'image': chandra}, {'name': 'Enteng', 'image': enteng}, {'name': 'Richard', 'image': richard},{'name': 'deviana', 'image': deviana}]
+    
+    const handlePerson = name =>  e  => {
+        e.preventDefault();
+        setParseName(name)
+        handleShow(true);
+        setModalShow(true)
+      };
     return (
         <div>
+            <Chats show={modalShow} name={parseName} onHide={handleClose} />
+            {/* { isShow ? <Chats name={parseName} style={{zIndex: '3'}}/> : null } */}
             {/* <p>this is profile member</p> */}
             <Container>
-
+            
             <div className="profile1">
           
             <div className="underForm">
@@ -89,44 +102,15 @@ const Profile = () => {
             </div>
             <div className="grup">
                 <Container>
-                <Row>
-                    <Col>
-                    <a onClick={() => setModalShow(true)}><img src={andre}/>
-                    <p>Andre</p>
-                    </a>
-                    </Col>
-                    <Col>
-                    <a href=""><img src={chandra}/>
-                    <p>Chandra</p>
-                    </a>
-                    </Col>
-                    <Col>
-                    <a href=""><img src={enteng}/>
-                    <p>Enteng</p>
-                    </a>
-                    </Col>
-                    <Col>
-                    {/* <img src={chandra}/> */}
-                    </Col>
-                </Row>
-                <Row>
-                    <Col >
-                    <a href=""><img src={richard}/>
-                    <p>Richard</p>
-                    </a>
-                    </Col>
-                    <Col>
-                    <a href=""><img src={deviana}/>
-                    <p>Deviana</p>
-                    </a>
-                    </Col>
-                    <Col >
-                    {/* <img src={chandra}/> */}
-                    </Col>
-                    <Col >
-                    {/* <img src={chandra}/> */}
-                    </Col>
-                </Row>
+                    <Row>
+                        {person.map((person, idx) => (
+                            <Col key={idx}>
+                                <a onClick={handlePerson (person.name)}><img src={person.image}/>
+                                <p>{person.name}</p>
+                                </a>
+                            </Col>
+                        ))}
+                    </Row>
                 </Container>
             </div> <br />
             <div className="car">
@@ -188,8 +172,7 @@ const Profile = () => {
             <br />
             </div>
             </div><br />
-            <Chats show={modalShow} onHide={() => setModalShow(false)} />
-
+            
             </Container>
         </div>
     )
